@@ -1,0 +1,14 @@
+{
+  "name": "exchange-v3-lite",
+  "description": "Powerswap Subgraph for Exchange V3 lite version",
+  "version": "1.0.0",
+  "author": "Powerswap",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "codegen": "graph codegen subgraph.yaml",
+    "build": "graph build subgraph.yaml",
+    "create-mainnet": "graph create --node http://graph.meter.io:8020/ powerswap/exchange-v3",
+    "remove-mainnet": "graph remove --node http://graph.meter.io:8020/ powerswap/exchange-v3",
+    "deploy-mainnet": "graph deploy --node http://graph.meter.io:8020/ --ipfs http://graph.meter.io:5001 powerswap/exchange-v3 subgraph.yaml"
+  }
+}
