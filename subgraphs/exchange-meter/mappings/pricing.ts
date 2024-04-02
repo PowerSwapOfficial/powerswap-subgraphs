@@ -3,7 +3,7 @@ import { BigDecimal, Address } from "@graphprotocol/graph-ts/index";
 import { Pair, Token, Bundle } from "../generated/schema";
 import { ZERO_BD, factoryContract, ADDRESS_ZERO, ONE_BD } from "./utils";
 
-let WMTR_ADDRESS = "0x160361ce13ec33C993b5cCA8f62B6864943eb083";
+let WMTR_ADDRESS = "0x160361ce13ec33c993b5cca8f62b6864943eb083";
 let WMTR_USDT_PAIR = "0xb4a569afe59178547bb2c301ae4d5fa988666699"; // created block 589414
 let WMTR_USDC_PAIR = "0x11f8c5dbcb7fc98ce9f2d09e2e8dd04b9c87bbb5"; // created block 648115
 
@@ -37,13 +37,15 @@ let WHITELIST: string[] = [
   "0x24aa189dfaa76c671c279262f94434770f557c35", // BUSD
   "0x5fa41671c48e3c951afc30816947126ccc8c162e", // USDT
   "0xd86e243fc0007e6226b07c9a50c9d70d78299eb5", // USDC
+  
   // "0x23396cf899ca06c4472205fc903bdb4de249d6fc", // UST
   // "0x7130d2a12b9bcbfae4f2634d864a1ee1ce3ead9c", // BTCB
+  "0x160361ce13ec33c993b5cca8f62b6864943eb083",    //
   "0x983147fb73a45fc7f8b4dfa1cd61bdc7b111e5b6", // ETH
 ];
 
 // minimum liquidity for price to get tracked
-let MINIMUM_LIQUIDITY_THRESHOLD_BNB = BigDecimal.fromString("10");
+let MINIMUM_LIQUIDITY_THRESHOLD_BNB = BigDecimal.fromString("0.001");
 
 /**
  * Search through graph to find derived BNB per token.
